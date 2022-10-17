@@ -14,7 +14,7 @@
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>servlet.HelloServlet</servlet-class>
     </servlet>
-        <!--登录-->
+    <!--登录-->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>servlet.LoginServlet</servlet-class>
@@ -29,24 +29,58 @@
         <servlet-name>VerificationCodeServlet</servlet-name>
         <servlet-class>servlet.VerificationCodeServlet</servlet-class>
     </servlet>
+    <!--查询上次登录时间Cookie-->
+    <servlet>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <servlet-class>servlet.GetCookieServlet</servlet-class>
+    </servlet>
+    <!--新增上次登录时间Cookie-->
+    <servlet>
+        <servlet-name>AddCookieServlet</servlet-name>
+        <servlet-class>servlet.AddCookieServlet</servlet-class>
+    </servlet>
+    <!--删除上次登录事假Cookie-->
+    <servlet>
+        <servlet-name>RemoveCookieServlet</servlet-name>
+        <servlet-class>servlet.RemoveCookieServlet</servlet-class>
+    </servlet>
+
+
     
-    
+    <!--测试映射-->
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
-    
+    <!--登录映射-->
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+    <!--资源下载映射-->
     <servlet-mapping>
         <servlet-name>LoadImageServlet</servlet-name>
         <url-pattern>/load</url-pattern>
     </servlet-mapping>
+    <!--生成验证码映射-->
     <servlet-mapping>
         <servlet-name>VerificationCodeServlet</servlet-name>
         <url-pattern>/code</url-pattern>
+    </servlet-mapping>
+    <!--查询上次登录时间Cookie映射-->
+    <servlet-mapping>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <url-pattern>/getcookie</url-pattern>
+    </servlet-mapping>
+    <!--新增上次登录时间Cookie映射-->
+    <servlet-mapping>
+        <servlet-name>AddCookieServlet</servlet-name>
+        <url-pattern>/addcookie</url-pattern>
+    </servlet-mapping>
+    <!--删除上次登录时间Cookie映射-->
+    <servlet-mapping>
+        <servlet-name>RemoveCookieServlet</servlet-name>
+        <url-pattern>/delcookie</url-pattern>
     </servlet-mapping>
     
 </web-app>
